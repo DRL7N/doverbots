@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '.'
 
@@ -41,18 +42,12 @@ client.on('message', message => {
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
     let copy = "DgGaming";
     let request = `Requested By ${message.author.username}`;
-    if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
-    msg.react('✅')
-    .then(() => msg.react('❌'))
-    .then(() =>msg.react('✅'))
+    if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');
+    message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
 
 
 
-    let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-    let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
-       let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
-    let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
-    reaction1.on("collect", r => {
+
     message.channel.send(`☑ |   ${message.guild.members.size} يتم ارسال البرودكاست الى عضو `).then(m => m.delete(5000));
     message.guild.members.forEach(m => {
     var bc = new
@@ -65,18 +60,14 @@ client.on('message', message => {
     m.send({ embed: bc })
     msg.delete();
     })
-    })
-    reaction2.on("collect", r => {
+
+
     message.channel.send(`**Broadcast Canceled.**`).then(m => m.delete(5000));
     msg.delete();
-    })
+
     })
     }
     })
-
-
-
-
 
 
 client.login(process.env.BOT_TOKEN);
