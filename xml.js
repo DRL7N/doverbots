@@ -27,6 +27,9 @@ client.on('ready', () => {
   console.log('')
   console.log('')
 });
+
+
+
 client.on('message', message => {
     if (message.author.id === client.user.id) return;
     if (message.guild) {
@@ -37,6 +40,7 @@ if(message.content.split(' ')[0] == prefix + 'bc1') {
 return;
 }
         message.guild.members.forEach(m => {
+   if(!message.member.hasPermission('ADMINISTRATOR')) return;
             var bc = new Discord.RichEmbed()
             .addField(' » الرسالة : ', args)
             .setColor('#ff0000')
@@ -48,4 +52,14 @@ return;
         return;
     }
 });
+
+
+
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
