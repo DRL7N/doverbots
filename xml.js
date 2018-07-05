@@ -35,12 +35,11 @@ client.on('message', message => {
     if (message.guild) {
    let embed = new Discord.RichEmbed()
     let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc1') {
+if(message.content.split(' ')[0] == prefix + 'b') {
     if (!args[1]) {
 return;
 }
         message.guild.members.forEach(m => {
-   if(!message.member.hasPermission('ADMINISTRATOR')) return;
             var bc = new Discord.RichEmbed()
             .addField(' » الرسالة : ', args)
             .setColor('#ff0000')
@@ -59,30 +58,7 @@ return;
 
 
 
-lient.on("guildMemberRemove", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-**
-السلام عليكم و رحمة الله و بركاتة ,
-يمكن صدفه , تخلق صحبه , حياك الله فـ السيرفر .
-                               [ https://discord.gg/Q9zhaHS ] 
-الدعووة خاصة لك ي قلبي ... [ ${member}  ]
-**`)
-}).catch(console.error)
 
-})
- 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-**
-السلام عليكم و رحمة الله و بركاتة ,
-يمكن صدفه , تخلق صحبه , حياك الله فـ السيرفر .
-                               [ https://discord.gg/Q9zhaHS ] 
-الدعووة خاصة لك ي قلبي ... [ ${member}  ]
-**`) 
-}).catch(console.error)
-})
 
 
 client.login(process.env.BOT_TOKEN);
