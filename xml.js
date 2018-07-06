@@ -28,56 +28,13 @@ client.on('ready', () => {
   console.log('')
 });
 
-
-
-
-
-
-
-client.on('message', message => {
-              if(!message.channel.guild) return;
-    if(message.content.startsWith('+bc')) {
-    if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-    let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-    let copy = "DgGaming";
-    let request = `Requested By ${message.author.username}`;
-    if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');
-    message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
-
-
-
-
-    message.channel.send(`☑ |   ${message.guild.members.size} يتم ارسال البرودكاست الى عضو `).then(m => m.delete(5000));
-    message.guild.members.forEach(m => {
-    var bc = new
-       Discord.RichEmbed()
-       .setColor('RANDOM')
-       .setTitle('البرودكاست') .addField('السيرفر', message.guild.name) .addField('المرسل', message.author.username)
-       .addField('الرساله', args)
-       .setThumbnail(message.author.avatarURL)
-       .setFooter(copy, client.user.avatarURL);
-    m.send({ embed: bc })
-    msg.delete();
-    })
-
-
-    message.channel.send(`**Broadcast Canceled.**`).then(m => m.delete(5000));
-    msg.delete();
-
-    })
-    }
-    })
-
- 
- client.on("guildMemberRemove", member => {
+client.on("guildMemberRemove", member => {
   member.createDM().then(function (channel) {
   return channel.send(` 
 **
 تعال وما بقالي يوم 
   في غيابك يصبرني .. !! 
-
 https://discord.gg/eCtt9G
-
 الدعووة خاصة لك يا  [ ${member}  ]
 **`) 
 }).catch(console.error)
@@ -86,20 +43,18 @@ https://discord.gg/eCtt9G
  
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
-  return channel.send(` 
+   return channel.send(` 
 **
-
-بعض الاشخاص يبحثون عن مكان جميل 
- والبعض يجعل المكان جميلا:black_heart: . 
-
-Ꮃelcome Ꭲo Ꮪerver Dover
-Link::https://discord.gg/Q9zhaHS
-
-
-[ ${member}  ]
+تعال وما بقالي يوم 
+  في غيابك يصبرني .. !! 
+https://discord.gg/eCtt9G
+الدعووة خاصة لك يا  [ ${member}  ]
 **`) 
 }).catch(console.error)
+
 })
+
+
 
 
 client.login(process.env.BOT_TOKEN);
