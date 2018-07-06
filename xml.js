@@ -34,7 +34,7 @@ client.on("guildMemberRemove", member => {
 **
 تعال وما بقالي يوم 
   في غيابك يصبرني .. !! 
-https://discord.gg/eCtt9G
+https://discord.gg/HxPDpbA
 الدعووة خاصة لك يا  [ ${member}  ]
 **`) 
 }).catch(console.error)
@@ -47,7 +47,7 @@ client.on("guildMemberAdd", member => {
 **
 تعال وما بقالي يوم 
   في غيابك يصبرني .. !! 
-https://discord.gg/eCtt9G
+https://discord.gg/HxPDpbA
 الدعووة خاصة لك يا  [ ${member}  ]
 **`) 
 }).catch(console.error)
