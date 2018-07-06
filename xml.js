@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = '.'
 
@@ -68,6 +67,39 @@ client.on('message', message => {
     })
     }
     })
+
+ 
+ client.on("guildMemberRemove", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(` 
+**
+تعال وما بقالي يوم 
+  في غيابك يصبرني .. !! 
+
+https://discord.gg/eCtt9G
+
+الدعووة خاصة لك يا  [ ${member}  ]
+**`) 
+}).catch(console.error)
+
+})
+ 
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(` 
+**
+
+بعض الاشخاص يبحثون عن مكان جميل 
+ والبعض يجعل المكان جميلا:black_heart: . 
+
+Ꮃelcome Ꭲo Ꮪerver Dover
+Link::https://discord.gg/Q9zhaHS
+
+
+[ ${member}  ]
+**`) 
+}).catch(console.error)
+})
 
 
 client.login(process.env.BOT_TOKEN);
