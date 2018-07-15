@@ -31,9 +31,7 @@ client.on('ready', () => {
 client.on("guildMemberRemove", member => {
   member.createDM().then(function (channel) {
   return channel.send(` 
-**
-تعال وما بقالي يوم 
-  في غيابك يصبرني .. !! 
+**ناقصنا لمبات :(
 https://discord.gg/HxPDpbA
 الدعووة خاصة لك يا  [ ${member}  ]
 **`) 
@@ -44,9 +42,7 @@ https://discord.gg/HxPDpbA
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
    return channel.send(` 
-**
-تعال وما بقالي يوم 
-  في غيابك يصبرني .. !! 
+**ناقصنا لمبات :(
 https://discord.gg/HxPDpbA
 الدعووة خاصة لك يا  [ ${member}  ]
 **`) 
