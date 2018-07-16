@@ -5,7 +5,7 @@ const prefix = '.'
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 
-  console.log('GG')
+  console.log('GG11')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
   console.log(`[Start] ${new Date()}`);
