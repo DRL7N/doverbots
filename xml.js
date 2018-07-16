@@ -51,6 +51,19 @@ https://discord.gg/HxPDpbA
 })
 
 
+client.on('message', msg => {
+  if (msg.content === 'تجربة77') {
+    member.createDM().then(function (channel) {
+   return channel.send(` 
+**ناقصنا لمبات :(
+https://discord.gg/HxPDpbA
+الدعووة خاصة لك يا  [ ${member}  ]
+**`) 
+}).catch(console.error)
+
+  }
+});
+
 
 
 client.login(process.env.BOT_TOKEN);
