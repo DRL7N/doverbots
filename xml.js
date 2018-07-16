@@ -52,7 +52,7 @@ https://discord.gg/HxPDpbA
 
 
 client.on('message', msg => {
-  if (msg.content === 'تجربة77') {
+  if (msg.content === 'ا') {
     member.createDM().then(function (channel) {
    return channel.send(` 
 **ناقصنا لمبات :(
