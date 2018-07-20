@@ -31,8 +31,12 @@ client.on('ready', () => {
 client.on("guildMemberRemove", member => {
   member.createDM().then(function (channel) {
   return channel.send(` 
-**ناقصنا لمبات :(
-https://discord.gg/HxPDpbA
+**
+بعض الاشخاص يبحثون عن مكان جميل 
+ والبعض يجعل المكان جميلا :black_heart: . 
+نورنا ي قشطه:heart_eyes:  
+https://media.discordapp.net/attachments/468037906724945920/468517988165746699/CV11.png
+https://discord.gg/hje7Aqx
 الدعووة خاصة لك يا  [ ${member}  ]
 **`) 
 }).catch(console.error)
@@ -42,8 +46,12 @@ https://discord.gg/HxPDpbA
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
    return channel.send(` 
-**ناقصنا لمبات :(
-https://discord.gg/HxPDpbA
+**
+بعض الاشخاص يبحثون عن مكان جميل 
+ والبعض يجعل المكان جميلا :black_heart: . 
+نورنا ي قشطه:heart_eyes:  
+https://media.discordapp.net/attachments/468037906724945920/468517988165746699/CV11.png
+https://discord.gg/hje7Aqx
 الدعووة خاصة لك يا  [ ${member}  ]
 **`) 
 }).catch(console.error)
