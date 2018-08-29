@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const prefix = '.'
 
 client.on('ready', () => {
+      client.user.setActivity("You",{type: 'WATCHING'})
   console.log(`Logged in as ${client.user.tag}!`);
 
   console.log('G3G11')
@@ -28,35 +29,33 @@ client.on('ready', () => {
   console.log('')
 });
 
-client.on("guildMemberRemove", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-**
-بعض الاشخاص يبحثون عن مكان جميل 
- والبعض يجعل المكان جميلا :black_heart: . 
-نورنا ي قشطه:heart_eyes:  
-https://media.discordapp.net/attachments/468037906724945920/468517988165746699/CV11.png
-https://discord.gg/hje7Aqx
-الدعووة خاصة لك يا  [ ${member}  ]
-**`) 
-}).catch(console.error)
 
-})
- 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-   return channel.send(` 
-**
-بعض الاشخاص يبحثون عن مكان جميل 
- والبعض يجعل المكان جميلا :black_heart: . 
-نورنا ي قشطه:heart_eyes:  
-https://media.discordapp.net/attachments/468037906724945920/468517988165746699/CV11.png
-https://discord.gg/hje7Aqx
-الدعووة خاصة لك يا  [ ${member}  ]
-**`) 
-}).catch(console.error)
 
-})
+
+ client.on('message', message => {
+  if (message.content === '-') {   
+      if (message.author.id !== '447179855898083338')
+ return message.react('⚠')
+    const channel = message.member.voiceChannel;
+
+    channel.join()
+    .then(connection => console.log('Connected!'))
+    .catch(console.error);
+  }
+});
+
+ client.on('message', message => {
+  if (message.content === '--') {   
+      if (message.author.id !== '447179855898083338')
+ return message.react('🤦🏻‍♂️')
+    const channel = message.member.voiceChannel;
+
+    channel.leave()
+  }
+});
+
+
+   
 
 
 
