@@ -33,7 +33,7 @@ client.on('ready', () => {
 
 
  client.on('message', message => {
-  if (message.content === '-') {   
+  if (message.content === '1-fa') {   
       if (message.author.id !== '447179855898083338')
  return message.react('⚠')
     const channel = message.member.voiceChannel;
@@ -45,7 +45,7 @@ client.on('ready', () => {
 });
 
  client.on('message', message => {
-  if (message.content === '--') {   
+  if (message.content === '2-fa') {   
       if (message.author.id !== '447179855898083338')
  return message.react('🤦🏻‍♂️')
     const channel = message.member.voiceChannel;
