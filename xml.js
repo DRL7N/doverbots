@@ -76,6 +76,11 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
 });
 
 
+client.on('message', msg => {
+  if (msg.content === 'Invited') {
+    msg.reply('Welcome To 3rb Network :heart: ');
+  }
+});
 
 
 
