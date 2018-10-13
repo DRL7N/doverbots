@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const prefix = '.'
 
 client.on('ready', () => {
-      client.user.setActivity("You",{type: 'WATCHING'})
+     
   console.log(`Logged in as ${client.user.tag}!`);
 
   console.log('G3G11')
@@ -75,9 +75,10 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
  }
 });
 client.on('message', msg => {
-  if (msg.content === 'ping') {
-    msg.reply('Pong!');
-  }
+      if ( msg.content.includes("Invited by")) {
+    msg.reply('ترحيب منور والله احلى من طب');
+
+}
 });
 
 
