@@ -76,7 +76,7 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
 });
 client.on('message', msg => {
       if ( msg.content.includes("Invited by")) {
-    msg.channel.send('ترحيب منور والله احلى من طب');
+    msg.channel.send(':3rb: **Welcome** To 3rb **Network**  :3rb: ');
 
 }
 });
