@@ -76,7 +76,7 @@ message.channel.createWebhook(message.author.username, message.author.avatarURL)
 });
 client.on('message', msg => {
       if ( msg.content.includes("Invited by")) {
-    msg.reply('ترحيب منور والله احلى من طب');
+    msg.channel.send('ترحيب منور والله احلى من طب');
 
 }
 });
