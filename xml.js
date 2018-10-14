@@ -84,7 +84,7 @@ var replays = {
 client.on('message', msg => {
       if ( msg.content.includes("Invited")) {
     var replay = replays.slam[(Math.floor(Math.random()*3))];
-message.channel.send(replay);
+msg.channel.send(replay);
 }
 });
 client.login(process.env.BOT_TOKEN);
