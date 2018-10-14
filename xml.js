@@ -81,6 +81,21 @@ client.on('message', msg => {
 }
 });
 
-
+var replays = {
+   slam: [
+"Welcome To 3rb Network
+",
+"Welcome ToOo 3rb Network
+",
+"Welcome ToO 3rb Network
+"
+]
+}
+client.on('message', msg => {
+      if ( msg.content.includes("Invited")) {
+    var replay = replays.slam[(Math.floor(Math.random()*3))];
+message.channel.send(replay+"</3");
+}
+});
 
 client.login(process.env.BOT_TOKEN);
