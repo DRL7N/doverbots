@@ -81,21 +81,28 @@ client.on('message', msg => {
 }
 });
 
-var replays = {
-   slam: [
-"Welcome To 3rb Network
-",
-"Welcome ToOo 3rb Network
-",
-"Welcome ToO 3rb Network
-"
-]
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
 }
-client.on('message', msg => {
-      if ( msg.content.includes("Invited")) {
-    var replay = replays.slam[(Math.floor(Math.random()*3))];
-message.channel.send(replay+"</3");
-}
-});
+if ( msg.content.includes("Invited")) { 
+        var msg1 = Array(3);
+        msg1[1] = "عليكم السلام هلا والله";
+        msg1[2] = "ارحب منور والله";
+        msg1[3] = "هلا اخووووووي"
+        var x = getRandomInt(0, 9);
+        if (x < 6){
+         if (x < 3){
+            msg.channel.sendMessage(msg1[1]);
+        }
+        else{
+               msg.channel.sendMessage(msg1[3]);
+        }
+        }
+        else{ 
+            msg.channel.sendMessage(msg1[2]);
+        }
 
 client.login(process.env.BOT_TOKEN);
