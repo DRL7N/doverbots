@@ -82,7 +82,7 @@ var replays = {
 ]
 }
 client.on('message', msg => {
-      if ( msg.content.includes("Invited")) {
+      if ( msg.content.includes("Iyyy57676nvited")) {
     var replay = replays.slam[(Math.floor(Math.random()*3))];
 msg.channel.send(replay);
 }
