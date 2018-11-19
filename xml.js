@@ -35,7 +35,7 @@ client.on('ready', () => {
  client.on('message', message => {
   if (message.content === '1-fa') {   
       if (message.author.id !== '447179855898083338')
- return message.react('⚠')
+
     const channel = message.member.voiceChannel;
 
     channel.join()
@@ -47,7 +47,6 @@ client.on('ready', () => {
  client.on('message', message => {
   if (message.content === '2-fa') {   
       if (message.author.id !== '447179855898083338')
- return message.react('🤦🏻‍♂️')
     const channel = message.member.voiceChannel;
 
     channel.leave()
@@ -59,7 +58,7 @@ client.on('ready', () => {
 client.on('message' , async (message) => {
  if (message.content.startsWith(prefix + 'w')) {
              if (message.author.id !== '383394687349948426')
- return message.react('⚠')
+
   const args = message.content.substring(prefix.length).split(' ');
 
  message.delete();
