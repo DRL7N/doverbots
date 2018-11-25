@@ -34,7 +34,7 @@ client.on('ready', () => {
 
  client.on('message', message => {
   if (message.content === '1-fa') {   
-      if (message.author.id !== '447179855898083338')
+      if (message.author.id !== '447179855898083338')return
 
     const channel = message.member.voiceChannel;
 
@@ -46,7 +46,8 @@ client.on('ready', () => {
 
  client.on('message', message => {
   if (message.content === '2-fa') {   
-      if (message.author.id !== '447179855898083338')
+     
+       if (message.author.id !== '447179855898083338') return
     const channel = message.member.voiceChannel;
 
     channel.leave()
@@ -57,7 +58,7 @@ client.on('ready', () => {
    
 client.on('message' , async (message) => {
  if (message.content.startsWith(prefix + 'w')) {
-             if (message.author.id !== '383394687349948426')
+             if (message.author.id !== '383394687349948426')return
 
   const args = message.content.substring(prefix.length).split(' ');
 
